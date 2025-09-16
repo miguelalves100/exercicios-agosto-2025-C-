@@ -55,7 +55,7 @@ else if (clima > 60f || clima <= 77f)
 {
     Console.WriteLine("dia proporcional para ir ao parque");
 } 
-if (clima > 77f)
+else
 {
     Console.WriteLine("dia perfeito para ir a praia");
 }
