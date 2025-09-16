@@ -1,0 +1,191 @@
+# exercicios-agosto-2025-C-
+só alguns exercicios que eu fiz pra um curso de C#
+
+
+//1 - leia os coeficiente de uma operação de segundo grau do segundo grau
+//e escrever o valor de seu delta,
+//sendo delta exprexo pela fórmula: delta = b elevado a 2 - 4ac
+
+Console.WriteLine("olá, vamos calcular um delta!");
+Console.WriteLine("insira o valor de a");
+var amassar = float.Parse(Console.ReadLine());
+Console.WriteLine("insira o valor de b");
+var borracha = float.Parse(Console.ReadLine());
+Console.WriteLine("insira o valor de c");
+var caneta = float.Parse(Console.ReadLine());
+var delta =  borracha * 2 - 4 * amassar * caneta;
+Console.WriteLine($"o valor Delta é :{delta}");
+
+
+//2 - leia o preço de compra e o percentual do lucro desejado por um vendedor
+//e calcular o preço de venda
+
+Console.WriteLine("bem vindo ao supermercado Guanabara");
+Console.WriteLine("o que você quer comprar?");
+var produto = Console.ReadLine();
+Console.WriteLine($" o {produto} custa:");
+var precocompra = float.Parse(Console.ReadLine());
+var precofinal = precocompra + (precocompra * 25) / 100;
+Console.WriteLine($"então o preço final do {produto} é R$:{precofinal}");
+
+//3 - escrever um algoritimo que leia o nome de um vendedor ,,
+//o seu salário fixo e o total de vendas efetuadas por mês (em dinheiro) ,,
+//sabendo que este vendedor ganha 15% de comissão sobre suas vendas
+//efetuadas efetuar, informar o seu nome, o salario no final do mês 
+
+Console.WriteLine("olá vendedor, qual o seu nome ?");
+var nomeVendedor = Console.ReadLine();
+Console.WriteLine($"otimo {nomeVendedor}, quanto você ganha por mês ?");
+var salariofixo = float.Parse(Console.ReadLine());
+Console.WriteLine("e quantas unidades da sua mercadoria foram vendidas ");
+var totalvendas = float.Parse(Console.ReadLine());
+var comissao = (totalvendas * 15) / 100;
+var salariototal = comissao + salariofixo;
+Console.WriteLine($"então {nomeVendedor}, seu salario mensal é R$:{salariototal},você o recebe todo fim do mês");
+
+//4 - leia a temperatura em gruas celsius e apresent-a de forma convertida em graus fahrenheit . A fórmula da conversão é: F = (9*C+160)  /  5, sendo Fa temperatura em Fahrenheit (F) na tela e exibida uma mensagem sobre o tempo, considere a seguinte regra 
+
+//Até 60F> mostre na tela "leve um agasalho, está frio"
+//Até 77F: mostre na tela "dia propicio para ir ao parque e caminhar"
+//acima de 77F: exiba "dia perfeito para ir a praia"
+
+Console.WriteLine("nossa, o clima está peculiar, quantos graus são lá fora ?");
+var clima = float.Parse(Console.ReadLine());
+if (clima <= 60f)
+{
+    Console.WriteLine("leve um agasalho, está frio");
+}
+else if (clima > 60f || clima <= 77f)
+{
+    Console.WriteLine("dia proporcional para ir ao parque");
+} 
+if (clima > 77f)
+{
+    Console.WriteLine("dia perfeito para ir a praia");
+}
+
+//5 - leia dois numeros inteiros a e b e informe se a é divisivel por b
+
+Console.WriteLine("me diga dois numeros inteiros, e eu direi se o primeiro é divisivel pelo segundo");
+Console.WriteLine("insira o primeiro numero");
+int alface = int.Parse(Console.ReadLine());
+Console.WriteLine("insira o segundo numero");
+int brocolis = int.Parse(Console.ReadLine());
+
+if (alface % brocolis == 0)
+{
+    Console.WriteLine($"{alface} é divisivel por {brocolis}");
+}
+else
+{
+    Console.WriteLine($"{alface} não é divisivel por {brocolis}");
+}
+
+    //6 - faça um rograma para ler o nome, as três notas e o número de faltas de um aluno para qual a sua situação final: aprovado, reprovado, por falta ou reprovação por média. a média para aprovação é 6.0 e o limite é 5. A reprovação por falta sobrpõe a reprovação por média
+
+    //nome
+
+    //3 notas
+
+    //número de faltas
+
+    //situação final (aprovado, reprovado por média ou por falta, limite de falta é 5 e de nota é 6.0)
+
+    Console.WriteLine("qual o nome do aluno?");
+var nome = Console.ReadLine();
+
+Console.WriteLine($"muito bem {nome}, qual foi a sua nota em Matemática?");
+var matematica = float.Parse(Console.ReadLine());
+if (matematica < 6)
+{
+    Console.WriteLine("hmm, tem que ver isso aí hein");
+}
+else
+{ 
+    Console.WriteLine("boa");
+}
+
+Console.WriteLine($"então caro {nome} e quanto a sua nota em artes?");
+var artes = float.Parse(Console.ReadLine());
+if (artes < 6)
+{
+    Console.WriteLine("cê é burro hein fi");
+}
+else
+{
+    Console.WriteLine("tá joia");
+}
+
+Console.WriteLine("e quanto a sua nota educação física?");
+var edfis = float.Parse(Console.ReadLine());
+if (edfis < 6)
+{
+    Console.WriteLine("aff");
+}
+else
+{
+    Console.WriteLine($"isso {nome}, continua nesse caminho que dá futuro");
+}
+
+Console.WriteLine("quantas faltas você deu?");
+var faltas = int.Parse(Console.ReadLine());
+if (faltas > 5)
+{
+    Console.WriteLine("vixe,Tem que ver com os cara lá");
+}
+else
+{
+    Console.WriteLine("tá suave");
+}
+
+Console.WriteLine($"então {nome}, ta preparado pra bronca man?");
+Console.WriteLine($"pia do céu,teve {faltas} faltas");
+if (faltas >5)
+{
+    Console.WriteLine("bah guri veio, tu falto demaize, to veiaco já");
+}
+else
+{
+    Console.WriteLine($"Parabéns {nome}, por falta você não foi reprovado");
+}
+
+Console.WriteLine($"a sua nota em matematica foi {matematica}");
+if (matematica < 6)
+{
+    Console.WriteLine($"você tirou uma nota baixa {nome},  sua nota é insufisciente");
+}
+else
+{
+    Console.WriteLine("suas notas foram boas, você passou");
+}
+
+Console.WriteLine($"sua nota em artes foi {artes}");
+if (artes < 6)
+{ 
+    Console.WriteLine($"você não passou em artes, {nome}, por favor não tente dominar o mundo");
+}
+else
+{
+    Console.WriteLine("você passou em artes, parabens por fazer o minimo");
+}
+
+Console.WriteLine($"sua nota em educação física foi {edfis}");
+if (edfis < 6)
+{
+    Console.WriteLine($"você reprovou em ED. Fisica, o que você fez ? não chutou a bola direito?");
+}
+else
+{
+    Console.WriteLine("você passou em educação física, parabéns por não ser um sedentário");
+}
+
+Console.WriteLine("Aperte qualque tecla para sair");
+if (artes <6)
+{
+    Console.WriteLine("se você souber o que é uma tecla");
+}
+
+Console.WriteLine("Aperte qualque tecla para sair");
+
+Console.ReadKey();
+Console.ReadKey(); 
